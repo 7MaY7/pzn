@@ -1,0 +1,26 @@
+#carouselExampleIndicators {
+    margin-bottom: 140px;
+
+    .carousel-indicators {
+        bottom: -140px;
+
+        li {
+            width: auto;
+            height: auto;
+            text-indent: 0;
+            max-width: none;
+
+            .image-indic {
+                width: 250px;
+            }
+        }
+
+        :not(.active) {
+            &:before {
+                height: 100%;
+                top: 0;
+                background: rgba(255, 255, 255, .5);
+            }
+        }
+    }
+}

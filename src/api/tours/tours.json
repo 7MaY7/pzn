@@ -1,0 +1,29 @@
+[
+    {
+        "imgUrl": "https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg",
+        "imageUrls": [
+            "https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg",
+            "https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg",
+            "https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg",
+            "https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+        ],
+        "title": "Maldives",
+        "description": "Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+        "price": 35454.4404,
+        "tourId": 3
+    },
+    {
+        "imgUrl": "https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg",
+        "title": "Indonesia",
+        "description": "Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+        "price": 346.446,
+        "tourId": 2
+    },
+    {
+        "imgUrl": "https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg",
+        "title": "Vietnam",
+        "description": "Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+        "price": 36456.46464,
+        "tourId": 1
+    }
+]

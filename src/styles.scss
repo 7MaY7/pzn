@@ -1,3 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "app/app.component";
-@import "app/home/home.component";
+
+.success {
+    color: #00C851;
+}
+.error {
+    color: #ff4444;
+}
+
+.btn-rounded {
+    border-radius: 25px;
+}

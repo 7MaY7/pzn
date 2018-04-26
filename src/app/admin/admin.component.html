@@ -1,0 +1,26 @@
+<div class="container admin">
+  <h1>Tours ({{ toursCount }})</h1> 
+    <ol class="tours">
+      <li class="tour" *ngFor="let tour of tours">
+          <span class="tour-comp">
+            <span *ngIf="tour.imgUrl" class="success">Image <i class="fa fa-check"></i></span>
+            <span *ngIf="!tour.imgUrl" class="error">No Image</span>
+          </span>
+        <span class="tour-comp">{{ tour.title }}</span>
+        <span class="tour-comp">{{ tour.price | currency }}</span>
+        <span class="tour-comp">
+            <span *ngIf="tour.description" class="success">Info <i class="fa fa-check"></i></span>
+            <span *ngIf="!tour.description" class="error">No Info</span>
+        </span>
+        <span class="tour-comp">{{ tour.tourId }}</span>
+      </li>
+    </ol>
+  <h2>New tour</h2>
+  <form>
+    <input type="url" required class="txt" name="tourImgUrl" placeholder="Image Url: https://..." [(ngModel)]="tourImgUrl">
+    <input type="text" class="txt" name="item" placeholder="Name.." [(ngModel)]="tourName">
+    <input type="number" required class="txt" name="item" placeholder="Price.." [(ngModel)]="tourPrice">
+    <input type="text" class="txt" name="item" placeholder="Info.." [(ngModel)]="tourInfo">
+    <input type="submit" class="btn" (click)="addItem()">
+  </form>
+  </div>

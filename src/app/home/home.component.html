@@ -2,12 +2,9 @@
 <div class="view intros">
     <div class="full-bg-img flex-center">
         <div class="container text-center white-text wow fadeInUp">
-            <h2>This Navbar is fixed and transparent</h2>
+            <h1>Найгарячіші тури тут!</h1>
             <br>
-            <h5>It will always stay visible on the top, even when you scroll down</h5>
-            <p>Navbar's background will switch from transparent to solid color while scrolling down</p>
-            <br>
-            <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+            <i class="fa fa-angle-double-down animated bounce infinite"></i>
         </div>
     </div>
 </div>
@@ -22,29 +19,30 @@
 
                 <!--Card-->
                 <div class="card card-cascade wider reverse my-4" *ngFor="let tour of tours">
+                    <a [routerLink]="['', tour.tourId]">
+                            
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
+                            <img [src]="tour.imgUrl" class="img-fluid">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/Card image-->
 
-                    <!--Card image-->
-                    <div class="view overlay hm-white-slight waves-light" mdbRippleRadius>
-                        <img [src]="tour.imgUrl" class="img-fluid">
-                        <a>
-                            <div class="mask"></div>
-                        </a>
-                    </div>
-                    <!--/Card image-->
 
+                        <!--Card content-->
+                        <div class="card-body text-center ">
+                            <!--Title-->
+                            <h4 class="card-title"><strong>{{ tour.title }}</strong></h4>{{tour.tourId}}
 
-                    <!--Card content-->
-                    <div class="card-body text-center ">
-                        <!--Title-->
-                        <h4 class="card-title"><strong>{{ tour.title }}</strong></h4>
+                            <p class="card-text">{{ tour.description }}</p>
 
-                        <p class="card-text">{{ tour.description }}</p>
+                            <h3 class="price"><strong>{{ tour.price | currency }}</strong></h3>
 
-                        <h3 class="price"><strong>{{ tour.price | currency }}</strong></h3>
-
-                    </div>
-                    <!--/.Card content-->
-
+                        </div>
+                        <!--/.Card content-->
+                    </a>
                 </div>
                 <!--/.Card-->
 

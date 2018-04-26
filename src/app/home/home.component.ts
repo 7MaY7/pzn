@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TourService } from '../admin/tour.service';
+import { ITour } from '../admin/tour';
 
 @Component({
   selector: 'app-home',
@@ -6,30 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  tours: any[] = [
-    {
-      imgUrl: 'https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg',
-      title: 'My adventure',
-      description: 'Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
-      price: 356.4564
-    },
-    {
-      imgUrl: 'https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg',
-      title: 'My adventure',
-      description: 'Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
-      price: 356.4564
-    },
-    {
-      imgUrl: 'https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg',
-      title: 'My adventure',
-      description: 'Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
-      price: 356.4564
-    }
-  ]
 
-  constructor() { }
+  errorMessage: string;
+  tours: ITour[];
+
+  constructor(private _tourService: TourService) { }
 
   ngOnInit() {
+    this._tourService.getTour()
+      .subscribe(tours => this.tours = tours,
+                 error => this.errorMessage = <any>error);
   }
 
 }
